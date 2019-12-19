@@ -8,8 +8,7 @@ def charts_request (stockName, interval="5m", rangee="1d"):
     querystring = {"region":"US","lang":"en","symbol":stockName,"interval":interval,"range":rangee}
 
     headers = {
-        'x-rapidapi-host': "apidojo-yahoo-finance-v1.p.rapidapi.com",
-        'x-rapidapi-key': "f822ff5871msha7c2f42a6aa0941p1433a2jsnef5a3b958f26"
+
         }
     response = requests.request("GET", url, headers=headers, params=querystring)
     return response.json()
